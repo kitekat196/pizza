@@ -14,9 +14,15 @@ function Header(){
           <Link to='/'>
           <div className="header__logo">
             <img width="38" src={logoPizzaSvg} alt="Pizza logo" />
-            <div>
-              <h1>React Pizza</h1>
-              <p>самая вкусная пицца во вселенной</p>
+              <div>
+                <div style={{display: "flex", flexDirection: "row"}}>
+                  <h1 style={{color: "red"}}>Pizza </h1>
+                  <h1 style={{color: "rgb(0, 150, 0)"}}>Express </h1>
+                  <h1>24</h1>
+              </div>
+              <div>
+                <p>самая вкусная пицца во вселенной</p>
+              </div>
             </div>
           </div>
           </Link>

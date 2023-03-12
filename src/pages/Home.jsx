@@ -3,11 +3,10 @@ import { Categories, SortPopup, PizzaBlock, PizzaLoadingBlock } from '../compone
 import { useDispatch, useSelector } from 'react-redux';
 import { setCategory, setSortBy } from '../redux/actions/filters';
 import { fetchPizzas } from '../redux/actions/pizzas';
-import { addPizz, addPizzaToCart } from '../redux/actions/cart';
 
-const categoryNames = ['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
+const categoryNames = ['Мясные', 'Вегетарианская', 'Гриль', 'Острые', "Необычные"];
 const sortItems = [
-  { name: 'популярности', type: 'popular', order: 'desc' },
+  { name: 'популярности', type: 'rating', order: 'desc' },
   { name: 'цене', type: 'price', order: 'desc' },
   { name: 'алфавиту', type: 'name', order: 'asc' },
 ];

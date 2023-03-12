@@ -3,11 +3,13 @@ import classNames from 'classnames';
 import Button from '../Button';
 import propTypes from 'prop-types';
 
-function PizzaBlock({ id, imageUrl, name, price, types, sizes, onClickAddPizza, addedCount }) {
+function PizzaBlock({ id, imageUrl, name, price, types, sizes, onClickAddPizza, addedCount, description }) {
+  const availableTypes = ['тонкое', 'традиционное'];
+  const availableSizes = [36, 42];
+  
   const [activeType, setActiveType] = React.useState(types[0]);
   const [activeSize, setActiveSize] = React.useState(0);
-  const availableTypes = ['тонкое', 'традиционное'];
-  const availableSizes = [26, 30, 40];
+ 
 
   const onSelectType = (index) => {
     setActiveType(index);
@@ -33,6 +35,7 @@ function PizzaBlock({ id, imageUrl, name, price, types, sizes, onClickAddPizza, 
     <div className="pizza-block">
       <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
       <h4 className="pizza-block__title">{name}</h4>
+      <p className='pizza-block__desc'>{description}</p>
       <div className="pizza-block__selector">
         <ul>
           {availableTypes.map((type, index) => (
@@ -42,24 +45,22 @@ function PizzaBlock({ id, imageUrl, name, price, types, sizes, onClickAddPizza, 
               className={classNames({
                 active: activeType === index,
                 disabled: !types.includes(index),
-              })}
-            >
+            })}>
               {type}
             </li>
           ))}
         </ul>
         <ul>
           {availableSizes.map((size, index) => (
-            <li
-              key={size}
-              onClick={() => onSelectSize(index)}
-              className={classNames({
-                active: activeSize === index,
-                disabled: !sizes.includes(size),
-              })}
-            >
-              {size} см.
-            </li>
+             <li
+             key={size}
+             onClick={() => onSelectSize(index)}
+             className={classNames({
+               active: activeSize === index,
+               disabled: !sizes.includes(size),
+             })}>
+             {size} см.
+           </li>
           ))}
         </ul>
       </div>
