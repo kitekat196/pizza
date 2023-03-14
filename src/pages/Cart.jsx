@@ -88,7 +88,7 @@ function Cart() {
                     <path d="M7 13L1 6.93015L6.86175 1" stroke="#D3D3D3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
 
-                  <Link to='/' className="button button--black">
+                  <Link to='/'>
                     <span>Вернуться назад</span>
                   </Link>
                 </a>
