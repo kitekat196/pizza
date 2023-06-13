@@ -1,4 +1,5 @@
 import React from 'react'
+import MaskedInput from 'react-input-mask';
 
 function Order() {
     return (
@@ -14,7 +15,8 @@ function Order() {
                     </div>
                     <div class="form-group" style={{ margin: "20px 0" }}>
                         <label for="exampleInputPassword1" style={{ fontSize: "22px" }}>Номер телефона</label>
-                        <input  name="number" required type="number" class="form-control" placeholder="89999999999" />
+                        <br/>
+                        <MaskedInput class="form-control item"   mask="+7 (999) 999-99-99" required placeholder="+7 (___) ___-__-__ " />
                     </div>
                     <div class="form-group" style={{ margin: "20px 0" }}>
                         <label for="exampleInputPassword1" style={{ fontSize: "22px" }}>Комментарий</label>
