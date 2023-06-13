@@ -13,19 +13,21 @@ function Header(){
         <div className="container">
           <Link to='/'>
           <div className="header__logo">
-            <img width="38" src={logoPizzaSvg} alt="Pizza logo" />
+            <img width="55" src={logoPizzaSvg} alt="Pizza logo" />
               <div>
                 <div style={{display: "flex", flexDirection: "row"}}>
-                  <h1 style={{color: "red"}}>Pizza </h1>
-                  <h1 style={{color: "rgb(0, 150, 0)"}}>Express </h1>
-                  <h1>24</h1>
+                  <h1 style={{fontSize:"30px", color: "red"}}>Pizza </h1>
+                  <h1 style={{fontSize:"30px", color: "rgb(0, 150, 0)"}}>Express </h1>
+                  <h1 style={{fontSize:"30px"}}>24</h1>
               </div>
               <div>
-                <p>самая вкусная пицца во вселенной</p>
+                <p style={{fontSize:"18px"}}>самая вкусная пицца во вселенной</p>
               </div>
             </div>
           </div>
           </Link>
+
+          
           <div className="header__cart">
             <Link to="/Cart">
             <Button className="button--cart">
@@ -63,6 +65,14 @@ function Header(){
               <span>{totalCount}</span>
             </Button>
             </Link>
+            <Link to='/AboutUs'>
+              <div style={{margin: "10px 0"}}> 
+              <Button className="button button--black">
+                <span style={{fontSize:"18px"}}>     О нас      </span>
+              </Button>
+              </div>
+            </Link>
+            
           </div>
           
         </div>

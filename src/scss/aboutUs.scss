@@ -1,0 +1,66 @@
+table{
+    margin: 0 auto;
+}
+
+
+.about__company{
+    width: 90%;
+    margin: 40px auto;
+}
+.about__company__title span{
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.about__company__decpription, .about__company__subdesc span {
+    font-size: 20px;
+    text-align: justify;
+} 
+
+
+.about__us {
+    text-align: justify;
+    padding-bottom: 1%;
+    
+}
+
+.about__us__block {
+    font-weight: bold;
+}
+
+.about__us__title{
+    margin: 0 2%;
+    font-size: 45px;
+    color: red;
+}
+.about__us__subtitle{
+    margin: 0 1%;
+    font-size: 27px;
+}
+
+.about__us__descr{
+    font-size: 20px;
+    padding: 2% 0;
+}
+
+.map__block{
+   margin: 2% 5%;
+   height: 620px;
+}
+
+.map__block__title{
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 16px;
+}
+
+.map__block__thismap {
+    width: 45%;
+    transition: .4s;
+ 
+    &:hover {   
+        width: 46%;
+    }
+}

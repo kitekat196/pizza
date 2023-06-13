@@ -1,0 +1,43 @@
+.footer{
+    width: 100%;
+    background-color: black;
+    color:rgb(159, 159, 159);
+    margin: 40px 0;
+    float:right;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0px;
+}
+
+.footer__title{
+    color: rgb(159, 159, 159);
+    font-weight: bold;
+    text-align: center;
+    width: 150%;
+    &:after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #d1d1d1;
+        margin: 10px auto;
+    }
+    @media (max-width: 1024px) {
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+.tega{
+    color: rgb(159, 159, 159);
+    font-size: 16px;
+    margin: 10px 10px;
+}
+
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  color:rgb(60, 153, 235);
+  
+}

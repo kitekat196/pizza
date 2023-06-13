@@ -4,6 +4,7 @@ import { CartItem, Button } from '../components';
 import { clearCart, removeCartItem, plusCartItem, minusCartItem } from '../redux/actions/cart'
 import emptyCartLogo from '../assets/img/empty-cart.png'
 import { Link } from 'react-router-dom';
+import {Footer} from '../components';
 
 function Cart() {
   const dispatch = useDispatch();
@@ -92,9 +93,11 @@ function Cart() {
                     <span>Вернуться назад</span>
                   </Link>
                 </a>
+                <Link to="/Order"> 
                 <Button onClick={onClickOrder} className="pay-btn">
-                  <span>Оплатить сейчас</span>
+                  <span>Оформить сейчас</span>
                 </Button>
+                </Link>
               </div>
             </div>
           </div> : <div className="cart cart--empty">
@@ -110,6 +113,7 @@ function Cart() {
           </div>
         }
       </div>
+      <Footer/>
     </div>
   );
 }

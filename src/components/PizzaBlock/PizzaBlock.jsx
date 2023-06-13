@@ -5,16 +5,18 @@ import propTypes from 'prop-types';
 
 function PizzaBlock({ id, imageUrl, name, price, types, sizes, onClickAddPizza, addedCount, description }) {
   const availableTypes = ['тонкое', 'традиционное'];
-  const availableSizes = [36, 42];
-  
+  const availableSizes = [42];
+
   const [activeType, setActiveType] = React.useState(types[0]);
   const [activeSize, setActiveSize] = React.useState(0);
- 
+
+  console.log("act " + activeType);
 
   const onSelectType = (index) => {
     setActiveType(index);
   };
   const onSelectSize = (index) => {
+    
     setActiveSize(index);
   };
 
@@ -24,8 +26,8 @@ function PizzaBlock({ id, imageUrl, name, price, types, sizes, onClickAddPizza, 
       name,
       imageUrl,
       price,
+      type: availableTypes[activeType],
       size: availableSizes[activeSize],
-      type: availableTypes[activeType]
     }
     onClickAddPizza(obj)
   }
@@ -37,7 +39,7 @@ function PizzaBlock({ id, imageUrl, name, price, types, sizes, onClickAddPizza, 
       <h4 className="pizza-block__title">{name}</h4>
       <p className='pizza-block__desc'>{description}</p>
       <div className="pizza-block__selector">
-        <ul>
+        <ul style={{ margin: "0 0 0 0", padding: "0 0 0 0", }}>
           {availableTypes.map((type, index) => (
             <li
               key={type}
@@ -45,22 +47,23 @@ function PizzaBlock({ id, imageUrl, name, price, types, sizes, onClickAddPizza, 
               className={classNames({
                 active: activeType === index,
                 disabled: !types.includes(index),
-            })}>
+              })}>
               {type}
             </li>
           ))}
         </ul>
-        <ul>
+        <ul style={{ margin: "0 0 0 0", padding: "0 0 0 0", }}>
+
           {availableSizes.map((size, index) => (
-             <li
-             key={size}
-             onClick={() => onSelectSize(index)}
-             className={classNames({
-               active: activeSize === index,
-               disabled: !sizes.includes(size),
-             })}>
-             {size} см.
-           </li>
+            <li
+              key={size}
+              onClick={() => onSelectSize(index)}
+              className={classNames({
+                active: activeSize === index,
+                disabled: !sizes.includes(size),
+              })}>
+              {size} см.
+            </li>
           ))}
         </ul>
       </div>

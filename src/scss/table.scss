@@ -1,0 +1,28 @@
+@import 'fonts';
+@import 'variables';
+@import 'libs/normalize';
+
+@import 'components/all';
+
+.table__flex1 {
+    @media (max-width: 1440px) {
+        display: flex;
+        flex-direction:column-reverse;
+        img{
+            max-width: 100%;
+        }
+    }
+}
+
+.table__flex2 {
+    @media (max-width: 1440px) {
+        display: flex;
+        flex-direction:column;
+        img{
+            max-width: 100%;
+        }
+    }
+}
+.img {
+    margin: 10px auto;
+}
